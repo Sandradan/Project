@@ -1,0 +1,63 @@
+/* General styles - put these straight into your stylesheet */
+
+*{
+    margin: 0;
+    padding: 0
+  }
+  
+  html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+  }
+  
+  /* Selectors to be matched up with rulesets */
+  
+  .card
+  
+  /* Rulesets to be matched up with selectors */
+{
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+  header
+  {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+  }
+  h2{
+      font-size: 2rem;
+      line-height: 3rem
+  }
+  
+  footer{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+  article{
+      height: 12rem;
+      background: rgba(0,0,0,0.2);
+      color: rgb(209, 206, 206);
+  }
+  article p{
+      /* line-height: 12rem; */
+      padding: 1rem;
+
+  }
+  article img{
+    max-height: 100%;
+    float: right;
+  }
+  header, footer{
+    height: 3rem;
+    padding: 1rem;
+  }
+  footer{
+      font-size: 1.5rem;
+      line-height: 3rem;
+  }
+  
