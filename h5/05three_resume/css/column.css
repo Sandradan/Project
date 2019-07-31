@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.column{
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    height: 500px;
+    overflow: scroll;
+}
+div:nth-of-type(3){
+    margin-right: 0;
+}
+p{
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+.clearfix{
+   
+}
+.clearfix::after{
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.column, footer {
+    padding: 1%;
+    border: 2px solid black;
+    background-color: red;
+  }
+footer {
+    margin-top: 4%;
+}

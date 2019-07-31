@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.container .lcontainer {
+    width: 100%;
+    background-color: rgb(133, 133, 133);
+}
+.lcontainer h1 {
+    font-size: 3rem;
+    color: beige;
+    padding: 25px;
+}
+.rcontainer {
+    width: 100%;
+    text-align: center;
+}
+.rcontainer table  {
+    width: 100%;
+}
+.rcontainer table
+{
+    border-collapse:collapse;
+    border: 1px rgb(233, 215, 215);
+}
+table .title{
+    background-color: rgb(214, 214, 214);
+    line-height: 5;
+}
+.rcontainer table table th,td {
+    text-align: left;
+}
+table tr table tr{
+    margin: 10px;
+}
+table tr:nth-of-type(-n+2) table  tr{
+   display: inline-block;
+}
+table tr:nth-of-type(n+3) table  tr{
+    display: block;
+}

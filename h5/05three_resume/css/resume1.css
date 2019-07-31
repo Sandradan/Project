@@ -1,0 +1,25 @@
+.basic_info {
+    text-align: left;
+}
+.basic_info table tr {
+    margin-right:20px;
+    float: left; 
+}
+.basic_info:nth-of-type(3) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(3) table tr td {
+   display: block;
+}
+.basic_info:nth-of-type(4) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(4) table tr td {
+   display: block;
+}
+.basic_info:nth-of-type(5) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(5) table tr td {
+   display: block;
+}

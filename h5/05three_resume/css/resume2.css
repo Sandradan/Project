@@ -1,0 +1,62 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 10px;
+}
+.lcontainer {
+    float: left;
+    width: 29%;
+    background-color: rgb(101, 165, 250);
+    text-align: center;
+    color: white;
+    padding-top: 10%; 
+    padding-bottom: 90%;
+    font-size: 2.5rem;
+   
+}
+.rcontainer {
+    float: right;
+    width: 69%;
+    text-align: left;
+}
+
+/* .rcontainer .title {
+    float: left;
+    font-size: 2rem;
+    display: block;
+    
+} */
+/* .rcontainer table {
+    float: left;
+    display: block;
+} */
+/* .rcontainer tr {
+    display: block;
+} */
+.basic_info:nth-of-type(3) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(3) table tr td {
+   display: block;
+}
+.basic_info:nth-of-type(4) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(4) table tr td {
+   display: block;
+}
+.basic_info:nth-of-type(5) table tr {
+    clear: both;
+}
+.basic_info:nth-of-type(5) table tr td {
+   display: block;
+}
+
+
+.clearfix::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+}

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.container .lcontainer {
+    width: 100%;
+    background-color: rgb(133, 133, 133);
+}
+.lcontainer h1 {
+    font-size: 3rem;
+    color: beige;
+    padding: 25px;
+}
+.rcontainer {
+    width: 100%;
+}
+.container h2 {
+    display: inline-block;
+    padding: 35px 25px;
+    background-color:rgb(214,214,214) ;
+    border: 1px solid darkgrey;
+}
+.container .basic_info {
+    display: inline-block;
+    width: 80%;
+}
+table {
+    width: 100%;
+}
+table tr {
+    float: left;
+}
+.basic_info:nth-of-type(n+3) tr {
+    float: none;
+}

@@ -1,0 +1,21 @@
+body{
+    width: 50%;
+    margin: 0 auto;
+}
+.text{
+    width: 100%;
+    border: solid 2px  rgb(6, 250, 177);
+    padding: 20px;
+    /* overflow: hidden; */
+}
+img{
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+.clearfix::after{
+    content: '.';
+    height: 0;
+    display: block;
+    clear: both;
+}

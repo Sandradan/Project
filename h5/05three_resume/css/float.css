@@ -1,0 +1,30 @@
+ html,body{
+    width: 50%;
+    margin: auto;
+}
+p::first-letter{
+    float: left;
+    background-color: red;
+    border: solid 1px black;
+    padding: 5px;
+    margin: 5px;
+    font-size: 40px;
+} 
+p::first-line{
+    text-transform: uppercase;
+}
+/* body{
+    width: 90%;
+    margin:0 auto;
+    max-width: 900px
+}
+img{
+    float: left;
+    margin-right: 20px;
+    max-width: 100%;
+
+}
+p{
+    line-height: 2;
+    word-spacing: 0.5px;
+} */
