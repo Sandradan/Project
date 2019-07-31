@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.style {
+    display: inline;
+    font-size: 1.5rem;
+    }
+#current {
+font-size: 2rem;
+}
+.container {
+    width: 70%;
+    height: 1390px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 10px;
+    background-color: antiquewhite
+}
+.lcontainer {
+    float: left;
+    width: 29%;
+    height: 1390px;
+    background-color: rgb(101, 165, 250);
+    text-align: center;
+    color: white;
+}
+.lcontainer h1 {
+    font-size: 5rem;
+    margin-top: 12rem;
+}
+.rcontainer {
+    float: right;
+    width: 69%;
+    height: 1390px;
+    text-align: left;
+    padding-top:4rem 
+}
+.rcontainer .info_container {
+    width: 100%;
+}
+.title_container {
+    height: 8rem;
+    line-height: 8rem;
+    
+}
+.title_container h2 {
+    font-size: 2.5rem;
+}
+.content {
+    /* height: 10rem; */
+    height: 3rem;
+
+}
+.content .info {
+    float: left;
+    margin-right: 2rem;
+}
+.info_container:nth-child(n+3) {
+    height: 20rem;
+}
+.info b {
+    margin-right: 1rem;
+    font-size: 1.5rem
+}
+.info_container:nth-child(n+3) .content .info {
+    width: 50%;
+}
+.info,
+.info b,
+.info a,
+.text {
+    font-size: 1.5rem;
+    margin-bottom: 4px
+}

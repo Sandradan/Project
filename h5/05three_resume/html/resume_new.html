@@ -4,91 +4,115 @@
 <head>
     <title>resume</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <!-- <link rel="stylesheet" href="../css/resume2.css"> -->
-    <link rel="stylesheet" href="../css/resume_new.css">
+    <link id="cssfile" rel="stylesheet" href="../css/resume_new1.css" class="">
+    <!-- <link rel="stylesheet" href="../css/resume_new2.css"> -->
+    <!-- <link rel="stylesheet" href="../css/resume_new3.css"> -->
+    <script src="../js/resume_new.js"></script>
 </head>
 
 <body>
+    <div id="css_style" >
+        <div class="style" id="style01">样式一</div>
+        <div class="style" id="style02">样式二</div>
+        <div class="style" id="style03">样式三</div>
+        <div id="current"></div>
+    </div>
     <div class="container">
-        <div class="lcontainer"> <h1>简历</h1></div>
+        <!-- 左边/上边简历部分 -->
+        <div class="lcontainer">
+            <h1>简历</h1>
+        </div>
         <div class="rcontainer">
-        <h2>基本信息</h2>
-        <div class="basic_info">
-                <table border="0">
-            <tr>
-                <th>姓名</th>
-                <td>张三</td>
-            </tr>
-            <tr>
-                <th>性别</th>
-                <td>男</td>
-            </tr>
-            <tr>
-                <th>应聘职位</th>
-                <td>web前端工程师</td>
-            </tr>
-        </table>
-        </div>
-        <h2>联系方式</h2>
-        <div class="basic_info">
-                <table border="0">
-            <tr>
-                <th>手机</th>
-                <td>1301234688</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td><a href="#"> adfjh@142.com</a></td>
-            </tr>
-            <tr>
-                <th>个人主页</th>
-                <td><a href="https://github.com">github</a> </td>
-            </tr>
-        </table>
-        </div>
-        <h2>能力描述</h2>
-        <div class="basic_info">
-            <table border="0">
-                <tr>
-                    <th>技术能力</th>
-                    <td>熟练掌握HTML、css、JavaScript</td>
-                </tr>
-                <tr>
-                    <th>综合能力</th>
-                    <td>良好的沟通，主动积极，努力勤奋</td>
-                </tr>
-            </table>
-            </div>
-        <h2>教育经历</h2>
-        <div class="basic_info">
-                <table border="0">
-                <tr>
-                    <th>本科</th>
-                    <td>百度大学</td>
-                </tr>
-                <tr>
-                        <th>本科</th>
-                        <td>百度大学</td>
-                    </tr>
-                </table>
-            </div>
-        <h2>项目经历</h2>
-        <div class="basic_info">
-                <table border="0">
-                <tr>
-                    <th>小度小度</th>
-                    <td>熟练掌握HTML、css、JavaScript</td>
-                </tr>
-                <tr>
-                        <th>小度小度</th>
-                        <td>熟练掌握HTML、css、JavaScript</td>
-                    </tr>
-            </table>
-            </div>
+        <!-- 基本信息 -->
+        <div class="info_container">
+            <div class="title_container">
+            <h2>基本信息</h2>
         </div>
         
+        <div class="content">
+            <div class="info">
+                <b>姓名</b>张三
+            </div>
+            <div class="info">
+                <b>性别</b>男
+            </div>
+            <div class="info">
+                <b>应聘职位</b>web前端工程师
+            </div>
+        </div>
     </div>
-    <div class="clearfix"></div>
+        <!-- 联系方式 -->
+        <div class="info_container">
+            <div class="title_container">
+
+            <h2>联系方式</h2>
+            </div>
+            <div class="content">
+            <div class="info">
+                <b>手机</b>123123123
+            </div>
+            <div class="info">
+                <b>Email</b>
+                <a href="http://www.baidu.com">sif@sf.com</a>
+            </div>
+            <div class="info">
+                <b>个人主页</b><a href="github.com">GitHub</a>
+            </div>
+        </div>
+    </div>
+        <!-- 能力描述 -->
+        <div class="info_container">
+            <div class="title_container">
+            <h2>能力描述</h2>
+            </div>
+            <div class="content">
+            <div class="info">
+                <b>技术能力</b>
+                <div class="text">熟练掌握</div> 
+            </div>
+            <!-- <br> -->
+            <div class="info">
+                <b>综合能力</b>
+                <div class="text">熟练掌握</div> 
+            </div>
+        </div>
+        </div>
+        
+        <div class="info_container">
+           <div class="title_container">
+            <h2>教育经历</h2>
+           </div>
+           <div class="content">
+            <div class="info">
+                <b>本科</b>
+                <div class="text">小度</div> 
+            </div>
+            <!-- <br> -->
+            <div class="info">
+                <b>研究生</b>
+                <div class="text">小度</div> 
+            </div>
+        </div>
+        </div>
+        <!-- 项目经历 -->
+        <div class="info_container">
+         <div class="title_container">    
+            <h2>项目经历</h2>
+         </div>
+         <div class="content">
+            <div class="info">
+                <b>小度</b>
+                <div class="text">小度</div>
+            </div>
+            <!-- <br> -->
+            <div class="info">
+                <b>小度</b>
+                <div class="text">小度</div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
