@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+nav  {
+    color: rebeccapurple;
+    border: 2px solid red;
+}
+nav li {
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+section {
+    border: 2px solid rgb(1, 107, 54);
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+@media screen and (min-width:600px){
+    .container {
+        display: flex;
+} 
+    nav {
+    width: 13%;
+    }
+    .rcontainer {
+        flex: 1;
+    
+    }
+}
+@media screen and (max-width:599px){
+    nav li {
+        display: inline;
+    }
+}

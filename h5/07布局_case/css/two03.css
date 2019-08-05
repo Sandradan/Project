@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    border: 1px dashed red;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /* min-height: 200px; */
+}
+/* float */
+/* .left,
+.right {
+    float: left;
+}
+.right {
+    width: 200px;
+    background-color: aqua;
+   
+}
+.left{
+    width: calc(100% - 200px);
+    background-color: yellowgreen;
+} */
+
+/* position */
+/* .right {
+    width: 200px;
+    background-color: aqua;
+    position: absolute;
+    left: calc(100% - 200px);
+}
+.left {
+    width: calc(100% - 200px);
+    position: absolute;
+    background-color: yellowgreen;
+} */
+
+/* flex */
+.container {
+    display: flex;
+}
+.right{
+    background-color: aqua;
+    flex: 0 200px;
+}
+.left {
+    background-color: yellowgreen;
+    width: calc(100% - 200px);
+}

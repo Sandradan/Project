@@ -13,9 +13,12 @@ img{
     width: 200px;
     height: 200px;
 }
-.clearfix::after{
+/* .clearfix::after{
     content: '.';
     height: 0;
     display: block;
     clear: both;
+} */
+.text {
+    overflow: auto;
 }

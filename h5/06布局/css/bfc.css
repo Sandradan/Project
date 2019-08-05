@@ -1,0 +1,13 @@
+.flow-box {
+    width: 1000px; 
+    background-color: #eee; 
+    overflow: hidden;
+     /* resize:horizontal; */
+}
+img{
+    float: left;
+    margin-right: 10px;
+}
+.flow-content {
+    overflow:hidden;
+}

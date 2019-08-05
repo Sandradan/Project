@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+}
+
+/* float bfc*/
+
+.container{
+    overflow: auto;
+}
+.left {
+    float: left;
+    width: 30%;
+    background-color: aqua;
+}
+.right {
+    background-color: yellowgreen;
+    overflow: auto;
+}
+
+/* position */
+/* .left {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    background-color: aqua;
+}
+.right {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    background-color: yellowgreen;
+} */
+
+/* flex */
+/* .container {
+    display: flex;
+}
+.left {
+    background-color: aqua;
+    flex: 30%;
+}
+.right{
+    flex: 70%;
+    background-color: yellowgreen;
+} */

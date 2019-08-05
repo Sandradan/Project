@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+    border: 1px dashed red;
+}
+/* float */
+/* .left,
+.right {
+    float: left;
+}
+.left {
+    width: 200px;
+    background-color: aqua;
+   
+}
+.right{
+    width: calc(100% - 200px);
+    background-color: yellowgreen;
+} */
+
+/* position */
+/* .left {
+    width: 200px;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+}
+.right {
+    width: calc(100% - 200px);
+    position: absolute;
+    right: 0;
+    background-color: yellowgreen;
+} */
+
+/* flex */
+/* .container {
+    display: flex;
+}
+.left {
+    background-color: aqua;
+    flex: 0 200px;
+}
+.right {
+    background-color: yellowgreen;
+    width: calc(100% - 200px);
+} */

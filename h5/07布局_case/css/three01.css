@@ -1,0 +1,51 @@
+body {
+    min-width: 550px;
+}
+.container{
+    border: 1px solid #ddd;
+}
+
+
+
+/* position+float */
+/* .column {
+    float: left;
+}
+ .center {
+    width: 200px;
+    background-color:red; 
+    position: absolute;
+    left: 200px;
+}
+.left {
+    width: 200px;
+    position: absolute;
+    background-color: aqua;
+}
+.right {
+    width: calc(100%-400px);
+    position: absolute;
+    left: 400px;
+    background-color: blueviolet;
+} */
+
+
+/* flex */
+.container {
+    display: flex;
+    align-content: flex-start;  
+}
+.left {
+    background-color: aqua;
+    flex: 0 0 200px;
+}
+.center {
+    background-color:red; 
+    flex: 0 0 200px;
+}
+.right {
+    background-color: blueviolet;
+}
+footer {
+    clear: both;
+}

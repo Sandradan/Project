@@ -1,0 +1,31 @@
+body {
+    min-width: 550px;
+}
+.container{
+    padding-left: 200px;
+    padding-right: 150px;
+    border: 1px solid #ddd;
+}
+.column {
+    float: left;
+}
+.center {
+    width: 100%;
+    background-color:red; 
+}
+.left {
+    width: 200px;
+    margin-left: -100%;
+    position: relative;
+    right: 200px;
+    background-color: aqua;
+}
+.right {
+    width: 150px;
+    background-color: blueviolet;
+    margin-right: -150px;
+}
+
+footer {
+    clear: both;
+}
