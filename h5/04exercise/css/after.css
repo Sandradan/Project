@@ -1,0 +1,20 @@
+span[data-descr]{
+    text-decoration: underline;
+    position: relative;
+    color: blue;
+    cursor: help
+}
+span[data-descr]:hover::after{
+    position: absolute;
+    content: attr(data-descr);
+    min-width: 120px;
+    border: 1px solid #d4cc7d;
+    border-radius: 10px;
+    color:#757474;
+    background-color: #ffffcc;
+    padding: 10px;
+    z-index: 1;
+    top: 25px;
+    left: 0;
+    text-align: center;
+}

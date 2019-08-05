@@ -1,0 +1,19 @@
+a:link{
+    
+    display: block;
+    background-color: rgb(183, 0, 255);
+    padding: 4px;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;  
+    /* color: rgb(4, 4, 238); */
+}
+
+a:hover{
+    color:red;
+    background-color: chocolate;
+}
+a:active{
+    color:rgb(177, 226, 43);
+    background-color: rgb(100, 237, 146);
+}
