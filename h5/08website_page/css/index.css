@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+/* 容器 */
+.container {
+    width: 160rem;
+    border: 1px solid #54514e;
+
+}
+/* 1注册 */
+.sign-up-container {
+    height: 99rem;
+    background: url(../image/图层1.png) no-repeat;
+    text-align: center;
+}
+.sign-up-container .bg {
+    background-color: rgb(0, 0, 0,0.5);
+    width:100%;
+    height: 100%;
+}
+h1 {
+    color: #ffffff;
+    font-size: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 21rem;
+    font-weight: 200;
+}
+p {
+    color:#ffffff;
+    font-size:1.7rem;
+    width: 77rem;
+    letter-spacing: 2px;
+}
+.content_block {
+    width: 60%;
+    height: 30rem;
+    border: 1px solid #54514e;
+}
+.content_block h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 6rem; 
+}
+p,
+.sign-up {
+    margin-top: 10rem;
+    margin: 4rem auto;
+}
+.sign-up p {
+    margin-top: 2rem;
+}
+form {
+    margin: auto;
+    width: 90%;
+    margin-top: 4.8rem;
+    
+}
+form input {
+    border: 1px solid #54514e;
+    color: white;
+    margin-left: 3.5rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+ form input:nth-child(-n+2)  {
+    width: 29rem;
+    height: 5rem;
+    background-color: transparent;
+}
+form input:last-child {
+    height: 5rem;
+    width: 12rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+/* 2导航列表 */
+
+nav {
+    height: 71rem;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: wrap;
+}
+nav p{
+    width: 100%;
+    color: #222222;
+    text-transform: uppercase;
+    margin: 5rem 0 0 0;
+}
+nav h1 {
+    width: 100%;
+    color: #54514e;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav .list {
+    margin: auto;
+    display: flex;
+}
+.list h2:nth-of-type(1){
+    width: 100%;
+}
+
+
+/* 7联系我们 */
+.contact_us_container{
+    width: 60%;
+    display: flex;
+    padding: 7rem 0;
+    margin: auto;
+}
+/* 左边 */
+.contact_us_container .l_email {
+    width: 50%;
+    height: 70rem;
+}
+.l_email h2 {
+    color: #222222;
+    text-transform: uppercase;
+}
+.l_email form {
+    padding: 5rem 0 0 5rem;
+}
+.l_email input {
+    margin-top: 2rem; 
+    color: #54514e;
+}
+.l_email input:nth-child(3){
+    width: 29rem;
+    height: 10rem;
+}
+.l_email input:last-child {
+    width: 29rem;
+    height: 5rem;
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+}
+/* 右边 */
+.contact_us_container .r_contact {
+    width: 50%;
+    height: 70rem;
+}
+.r_contact h1 {
+    color: #141414;
+    padding-top: 5rem;
+}
+.r_contact p {
+    width: 100%;
+    margin: 0rem;
+    color: #54514e;
+    text-align: left;
+}
+.r_contact h1,
+.r_contact p,
+.r_contact .contact_box {
+    padding-left:5rem; 
+}
+.contact_box {
+    display: flex;
+    margin-top: 2rem;
+}
+.r_contact img {
+    padding-top: 1rem;
+}
+
+/* 尾部 */
+footer {
+    height: 41rem;
+    width: 100%;
+    background-color: #141414;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+footer .info{
+    width: 15%;
+    margin-top: 8rem;
+}
+.info h2 {
+    text-align: left;
+    margin-top: 2rem;
+    color: #ffffff;
+    font-size: 2.2rem;
+}
+h2 a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #54514e;
+}
+.info .icon {
+    margin-top: 2rem;
+}
+.icon img {
+    margin-right: 2rem;
+}
