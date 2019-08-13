@@ -4,13 +4,19 @@
     font-size: 16px;
     overflow-x: hidden;
 }
+.container::-webkit-scrollbar,
+.lcontainer::-webkit-scrollbar,
+.rcontainer::-webkit-scrollbar
+{
+    width: 0% !important;
+}
 .container{
     border: solid 1px rgb(184, 182, 182);
     margin: 0 auto;
     box-shadow: 2px 0px 10px rgb(184, 182, 182);
     background-color: rgb(233, 233, 233);
     width: 100%;
-    height: 100%
+    height: 100vh;
 }
 .lcontainer{
     float: left;
@@ -54,6 +60,7 @@ h1{
 .rcontainer{
     width: 60%;
     float: left;
+    height: 100vh;
 }
 .profile{
     margin: 10%;
@@ -91,10 +98,10 @@ border-bottom-color: rgb(60, 74, 80);
    margin-top: 1%;
    margin-left: 10px;
 }
-/* .content .info_content .line{
-    border: dashed 1px rgb(60, 74, 80);
-    clear: both; */
-/* } */
+.content  .info_content #paint{
+    margin-left: .5rem;
+    margin-top: .6rem;
+}
 .info_content table{
     margin: 5% 0;
 }
