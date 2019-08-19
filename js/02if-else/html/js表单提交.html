@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>表单提交校验</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="fname">First name: </label>
+            <input id="fname" type="text">
+        </div>
+        <div>
+            <label for="lname">Last name: </label>
+            <input id="lname" type="text">
+        </div>
+        <div>
+            <input id="submit" type="submit">
+        </div>
+    </form>
+    <p></p>
+    <script>
+        var form = document.querySelector('form');
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        var sub = document.getElementById('submit');
+        var text = document.querySelector('p');
+        form.onsubmit = function (e) {
+            if (fname.value === '' || lname.value === '') {
+                e.preventDefault();
+                text.textContent = 'You need to fill in both names!';
+            }else if (isNaN(fname)||isNaN(lname)){
+                e.preventDefault();
+                text.innerText = '请输入数字';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

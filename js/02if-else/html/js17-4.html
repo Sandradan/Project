@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>请输入 5 到 10 之间的数字：</p>
+
+    <input id="demo" type="text"  maxlength="6" >
+    <button type="button" onclick="myFunction()">检测输入</button>
+    <p id="p01"></p>
+
+    <script>
+        function myFunction() {
+            var txt = document.getElementById("demo");
+            var value = txt.value;
+            var ouput = document.getElementById("p01");
+            try {
+
+                if (value == "") throw "输入不能为空";
+                if (isNaN(value)) throw "请输入数字";
+                value = Number(value);
+                if (value < 5) throw "输入的数字太小";
+                if ( value> 10) throw "输入的数字太大";
+            } catch (err) {
+                ouput.innerHTML = err;
+            }
+            finally {
+                txt.value = '';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

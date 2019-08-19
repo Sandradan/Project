@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3的小游戏</title>
+
+</head>
+
+<body>
+    <div>
+        <p class="text"></p>
+    </div>
+    <script>
+        var text = document.querySelector('p');
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 || /3/g.test(i)) {
+                text.innerHTML += 'PA<br>';
+            } else {
+                text.innerHTML += i + '<br>';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

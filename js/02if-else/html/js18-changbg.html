@@ -1,0 +1,67 @@
+<script>
+var select = document.querySelector('select');
+var html = document.querySelector('.output');
+
+select.onchange = function() {
+  var choice = select.value;
+switch(choice){
+case 'white':
+update('white','Black');
+break;
+case 'Black':
+update('Black','white');
+break;
+case 'Purple':
+update('Purple','Black');
+break;
+case 'Yellow':
+update('Yellow','Black');
+break;
+case 'Psychedelic':
+update('Psychedelic','Black');
+break;
+
+}
+ 
+}
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+
+
+var select = document.querySelector('select');
+var html = document.querySelector('.output');
+
+select.onchange = function() {
+  var choice = select.value;
+
+  switch(choice) {
+    case 'black':
+      update('black','white');
+      break;
+    case 'white':
+      update('white','black');
+      break;
+    case 'purple':
+      update('purple','white');
+      break;
+    case 'yellow':
+      update('yellow','darkgray');
+      break;
+    case 'psychedelic':
+      update('lime','purple');
+      break;
+  }
+}
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+
+
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <h1>Demo</h1>
+    <div id="question">
+    <p id="content-wrapper">你是谁？</p>
+</div>
+    <input id="name-input" type="text" placeholder="输入你的名字">
+    <button id="send-btn">发送</button>
+    <script>
+        document.getElementById('send-btn').onclick= function (){
+            document.getElementById('question').innerHTML ="<p id = 'answer'></p>";
+            document.getElementById('answer').innerText = 'hello '+ document.getElementById('name-input').value;
+        }
+    </script>
+</body>
+</html>

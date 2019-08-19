@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>99乘法表</title>
+    </head>
+    <body>
+        <div class="mul">
+        </div>
+        <script>
+            let i,j;
+            var text = document.querySelector('.mul');
+            for(i=1;i<=9; i++){
+                for(j=1;j<i+1;j++){
+                    text.innerHTML += i+"x"+j+"="+i*j+'&nbsp'+'&nbsp';
+                }
+                text.innerHTML += '<br/>';
+                text.innerHTML += '<br/>';
+            }
+            
+            </script>
+    </body>
+</html>
