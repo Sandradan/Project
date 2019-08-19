@@ -263,7 +263,7 @@ li:hover {
 .content-box::-webkit-scrollbar,
 .nav-box::-webkit-scrollbar,
 .page-box::-webkit-scrollbar {
-    width: 0 !important
+    width: 0 !important;
 }
 .name {
     border-bottom: solid 1px #e5e8ee;
