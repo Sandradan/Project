@@ -1,0 +1,25 @@
+<input id="name" type="text">
+<button id="submit-btn">Submit</button>
+<script>
+    var input = document.querySelector('input');
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', Submitcontent);
+    input.addEventListener('keyup', keyboard);
+
+    function keyboard() {
+        if (event.keyCode === 13) {
+            Submitcontent();;
+        }
+        if (event.keyCode === 27) {
+            clear();
+        }
+    }
+
+    function Submitcontent() {
+        console.log(input.value);
+    }
+
+    function clear() {
+        input.value = '';
+    }
+</script>
