@@ -35,19 +35,17 @@
         var btn = document.querySelector('button');
         var input = document.querySelector('input');
         var list = document.querySelector('ul');
-        btn.addEventListener('click', addItem);
-        
 
         function addItem() {
-            input.value = '';
-
+            var inputValue = input.value;
+            input.value = ' ';
             var lis = document.createElement('li');
-            list.appendChild(lis);
             var text = document.createElement('span');
             var listBtn = document.createElement('button');
             lis.appendChild(text);
             lis.appendChild(listBtn);
-            text.textContent = input.value;
+            list.appendChild(lis);
+            text.textContent = inputValue;
             listBtn.textContent = 'delete';
             listBtn.addEventListener('click', removeBtn);
 
@@ -56,6 +54,8 @@
             }
             input.focus()
         }
+        btn.addEventListener('click', addItem);
+
     </script>
 </body>
 
