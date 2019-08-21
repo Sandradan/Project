@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>smile</title>
+</head>
+<style>
+    div {
+        background-image: url(smile.jpg);
+        width: 480px;
+        height: 480px;
+    }
+</style>
+
+<body>
+    <div class="img"></div>
+    <script>
+        var pic = document.querySelector('.img');
+        pic.style.backgroundPositionY = '0';
+        var k = -1;
+
+        function smile() {
+            if (parseFloat(pic.style.backgroundPositionY) === 0) {
+                k = -1;
+            }
+            if (parseFloat(pic.style.backgroundPositionY) === -7680) {
+                k = 1;
+            }
+            pic.style.backgroundPositionY = parseFloat(pic.style.backgroundPositionY) + 480 * k + 'px';
+        }
+        setInterval(smile, 100);
+    </script>
+</body>
+
+</html>
