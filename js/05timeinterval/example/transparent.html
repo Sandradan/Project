@@ -1,0 +1,61 @@
+<!-- 点击按钮时，开始改变 fade-obj 的透明度，开始一个淡出（逐渐消失）动画，直到透明度为0
+在动画过程中，按钮的状态变为不可点击
+在动画结束后，按钮状态恢复，且文字变成“淡入”
+在 按钮显示 淡入 的状态时，点击按钮，开始一个“淡入”（逐渐出现）的动画，和上面类似按钮不可点，直到透明度完全不透明
+淡入动画结束后，按钮文字变为“淡出”
+暂时不要使用 CSS animation （以后我们再学习） -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>背景淡入淡出</title>
+</head>
+
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000;"></div>
+    <button id="fade-btn">淡出</button>
+    <script>
+        var fadeObj = document.querySelector("#fade-obj");
+        var fadeBtn = document.querySelector("#fade-btn");
+        var opacity = 1;
+        fadeBtn.addEventListener('click', change120);
+
+        // setTimeout方法
+        function change120() {
+            if (opacity) {
+                setTimeout(change120, 300);
+                opacity = Math.floor((opacity - 0.1) * 100) / 100;
+                fadeObj.style.opacity = opacity;
+                console.log(opacity);
+                fadeBtn.disabled = true;
+
+            } else {
+                fadeBtn.disabled = false;
+
+                fadeBtn.innerHTML = '淡入';
+                fadeBtn.addEventListener('click', change121);
+            }
+            fadeBtn.removeEventListener('click', change120);
+        }
+
+        function change121() {
+            if (opacity !== 1) {
+                setTimeout(change121, 300);
+                opacity = Math.floor((opacity + 0.1) * 100) / 100;
+                if (1 - opacity <= 0.01)
+                    opacity = Math.floor(opacity + 0.02);
+                fadeObj.style.opacity = opacity;
+                console.log(opacity);
+                fadeBtn.disabled = true;
+            } else {
+                fadeBtn.disabled = false;
+                fadeBtn.innerHTML = '淡出';
+                fadeBtn.addEventListener('click', change120);
+            }
+            fadeBtn.removeEventListener('click', change121);
+        }
+    </script>
+</body>
