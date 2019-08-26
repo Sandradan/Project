@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>数字练习</title>
+</head>
+
+<body>
+    <div>
+        <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a" checked></label>
+        <input id="num-a" type="text">
+        <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label>
+        <input id="num-b" type="text">
+    </div>
+    <div>
+        <button>判断当前选中的输入框输入内容是否为数字</button>
+
+        <button>把 A 四舍五入为 B 个小数位数的数字</button>
+
+        <button>当前选中数字的绝对值</button>
+
+        <button>对当前选中的数字进行上舍入</button>
+
+        <button>对当前选中的数字进行下舍入</button>
+
+        <button>把当前选中的数字四舍五入为最接近的整数</button>
+
+        <button>返回 A 和 B 中的最高值</button>
+
+        <button>返回 A 和 B 中的最低值</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        var A = document.querySelector('#num-a');
+        var B = document.querySelector('#num-b');
+        var radioA = document.querySelector('#radio-a');
+        var radioB = document.querySelector('#radio-b');
+        var btn = document.querySelectorAll('button'); //按钮1
+
+
+        function isNumber(num) {
+            if (isNaN(num) || num == '') {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function check(check) {
+            if (check.checked) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //按钮1：判断当前选中的输入框输入内容是否为数字
+        var result = document.querySelector('p');
+        btn[0].onclick = function () {
+            if (check(radioA)) {
+                if (isNumber(A.value)) {
+                    result.innerHTML = '恭喜您，输入数字正确';
+
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+
+                }
+            } else {
+                if (isNumber(B.value)) {
+                    result.innerHTML = '恭喜您，输入数字正确';
+
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+                }
+            }
+        }
+
+        //按钮2：把 A 四舍五入为 B 个小数位数的数字
+        btn[1].onclick = function () {
+            if (isNumber(A.value) && isNumber(B.value)) {
+                var aa = parseFloat(A.value);
+                var newA = aa.toFixed(B.value);
+                result.innerHTML = newA;
+            } else {
+                result.innerHTML = '请输入正确的数字';
+            }
+        }
+
+        //按钮3：当前选中数字的绝对值
+        btn[2].onclick = function () {
+            if (check(radioA)) {
+                if (isNumber(A.value)) {
+                    var text = Math.abs(A.value);
+                    result.innerHTML = text;
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+                }
+            } else {
+                if (isNumber(B.value)) {
+                    text = Math.abs(B.value);
+                    result.innerHTML = text;
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+
+                }
+            }
+        }
+
+        //按钮4：对当前选中的数字进行上舍入
+        btn[3].addEventListener('click', function () {
+            if (check(radioA)) {
+                if (isNumber(A.value)) {
+                    result.innerHTML = Math.ceil(A.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+
+                }
+            } else {
+                if (isNumber(B.value)) {
+                    result.innerHTML = Math.ceil(B.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+                }
+            }
+        })
+        //按钮5：对当前选中的数字进行下舍入
+        btn[4].addEventListener('click', function () {
+            if (check(radioA)) {
+                if (isNumber(A.value)) {
+                    result.innerHTML = Math.floor(A.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+
+                }
+            } else {
+                if (isNumber(B.value)) {
+                    result.innerHTML = Math.floor(B.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+                }
+            }
+        })
+        //按钮6：把当前选中的数字四舍五入为最接近的整数
+        btn[5].addEventListener('click', function () {
+            if (check(radioA)) {
+                if (isNumber(A.value)) {
+                    result.innerHTML = Math.round(A.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+
+                }
+            } else {
+                if (isNumber(B.value)) {
+                    result.innerHTML = Math.round(B.value);
+                } else {
+                    result.innerHTML = '请输入正确的数字';
+                }
+            }
+        })
+        //按钮7：返回 A 和 B 中的最高值
+        btn[6].addEventListener('click', function () {
+            if (isNumber(A.value) && isNumber(B.value)) {
+                var text = Math.max(A.value, B.value);
+                result.innerHTML = text;
+            } else {
+                result.innerHTML = '请输入正确的数字';
+            }
+        })
+        //按钮8：返回 A 和 B 中的最低值
+        btn[7].addEventListener('click', function () {
+            if (isNumber(A.value) && isNumber(B.value)) {
+                var text = Math.min(A.value, B.value);
+                result.innerHTML = text;
+            } else {
+                result.innerHTML = '请输入正确的数字';
+            }
+        })
+    </script>
+</body>
+
+</html>
