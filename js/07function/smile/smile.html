@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 480px;
+        height: 480px;
+        background-image: url(smile.jpg);
+    }
+</style>
+
+<body>
+    <div class="box">
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var k = -1;
+        box.style.backgroundPositionY = '0';
+        console.log(box.style.backgroundPositionY)
+        
+        setInterval(function () {
+
+            if (parseFloat(box.style.backgroundPositionY) === 0) {
+                k = -1
+            }
+            if (parseFloat(box.style.backgroundPositionY) === -(8160 - 480)) {
+                k = 1
+            }
+            box.style.backgroundPositionY = parseFloat(box.style.backgroundPositionY) + k * 480 + 'px';
+
+        }, 100)
+    </script>
+</body>
+
+</html>

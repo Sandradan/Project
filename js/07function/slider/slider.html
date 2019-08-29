@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>滑块</title>
+</head>
+<style>
+    .box {
+        position: relative;
+        width: 400px;
+        height: 50px;
+        border: 1px solid #999;
+        margin: 100px auto;
+        box-sizing: border-box;
+    }
+
+    .slider {
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #999;
+        z-index: 2;
+        background: url("images/箭头.png") no-repeat;
+        background-color: beige;
+        background-position: 10px 10px;
+        cursor: pointer;
+    }
+
+    
+
+    p {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .bg {
+        position: absolute;
+        width: 0;
+        height: 48.5px;
+        background-color: aquamarine;
+        top: 0;
+        box-sizing: content-box;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="slider">
+        </div>
+        <p>拖动滑块验证</p>
+        <div class="bg"></div>
+
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var slider = document.querySelector('.slider');
+        var boxWidth = box.offsetWidth;
+        var sliderWidth = slider.offsetWidth;
+        var bg = document.querySelector('.bg');
+        var text = document.querySelector('p');
+        var moveX = 0;
+        slider.onmousedown = function (e) {
+            var startX = e.clientX;
+            slider.onmousemove = function (e) {
+                moveX = e.clientX - startX;
+
+                if (moveX < 0) {
+                    this.style.left = 0;
+                } else{
+                    slider.style.left = moveX + 'px';
+                    bg.style.width = moveX + 'px';
+                    if (moveX >= boxWidth - sliderWidth) {
+                        slider.onmousedown = null;
+                        slider.onmousemove = null;
+                        text.innerHTML = '验证成功';
+                        text.style.color = 'white';
+                    }
+                }
+
+                // slider.style.left = Math.max(moveX, 0);
+                // slider.style.left = Math.min(moveX,+(boxWidth-sliderWidth))+'px';
+            }
+        }
+        slider.onmouseup = function () {
+            slider.onmousemove = null;
+            if(moveX<boxWidth - sliderWidth){
+                slider.style.left = 0;
+                bg.style.width = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

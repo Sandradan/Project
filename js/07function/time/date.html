@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>获取当前时间,按秒更新</title>
+</head>
+
+<body>
+    <p></p>
+    <div></div>
+    <script>
+        // 封装一个函数，来根据某个日期返回这一天是星期几
+        // 封装一个函数，把月、日、小时等出现个位数的情况前面补充0，补充为两位，比如1变为01
+        // 封装一个函数，把最后的日期时间，按照要求的格式进行包装
+        // 可能不止上面这些，尽可能地进行功能的解耦和拆解
+        var text = document.querySelector('p');
+        var text2 = document.querySelector('div');
+        setInterval(gettime, 1000);
+
+        function gettime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth();
+            var date = now.getDate()
+            var hour = now.getHours();
+            var min = now.getMinutes();
+            var sec = now.getSeconds();
+            var day = now.getDay();
+            var day2 = now.getDay();
+            var d = '';
+
+            function geshi() {
+                if (month < 10) {
+                    month = '0' + parseInt(month+1);
+                }
+                if (date < 10) {
+                    date = '0' + date;
+                }
+                if (hour < 10) {
+                    hour = '0' + hour;
+                }
+                if (min < 10) {
+                    min = '0' + min;
+                }
+                if (sec < 10) {
+                    sec = '0' + sec;
+                }
+                if (hour > 12) {
+                    d = 'PM';
+                } else {
+                    d = 'AM';
+                }
+            }
+          
+            function getday(){
+                switch (day) {
+                    case 1:
+                        day = "一";
+                        break;
+                    case 2:
+                        day = "二";
+                        break;
+                    case 3:
+                        day = "三";
+                        break;
+                    case 4:
+                        day2 = "四";
+                        break;
+                    case 5:
+                        day = "五";
+                        break;
+                    case 6:
+                        day = "六";
+                        break;
+                    case 7:
+                        day = "日";
+                        break;
+                }
+            }
+            function getday2() {
+                switch (day2) {
+                    case 1:
+                        day2 = " Monday";
+                        break;
+                    case 2:
+                        day2 = "Tuesday";
+                        break;
+                    case 3:
+                        day2 = "Wednesday";
+                        break;
+                    case 4:
+                        day2 = "Thursday";
+                        break;
+                    case 5:
+                        day2 = "Friday";
+                        break;
+                    case 6:
+                        day2 = "Saturday";
+                        break;
+                    case 7:
+                        day2 = "Sunday";
+                        break;
+                }
+            }
+            function add() {
+                //显示2008年10月10日星期一 12:12:12
+                text.innerHTML = year + '年' + month + '月' + date + '日' + '星期' + day + ' ' + hour + ':' + min + ':' +sec;
+                // 输出格式变为：2008-10-10 Monday 07:10:30 PM
+                text2.innerHTML = year + '-' + month + '-' + date + ' ' + day2 + ' ' + hour + ':' + min + ':' + sec + d;
+            }
+            geshi();
+            getday();
+            getday2();
+            add();
+        }
+    </script>
+</body>
+
+</html>
