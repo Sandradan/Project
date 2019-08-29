@@ -58,7 +58,7 @@ window.sayColor(); //"red"
 ```
 #### 2.Math对象
 ###### 1.Math对象的属性
-![9855b8176c4a9c8043a195715a8494ba.png](en-resource://database/1882:1)
+![Image.png](en-resource://database/1882:1)
 
 ###### 2.min()和max()方法
 ```
