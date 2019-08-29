@@ -134,7 +134,7 @@ person.name = "Nicholas";
 person.age = 29;
 person.job = "Software Engineer";
 person.sayName = function(){
-alert(this.name);
+    alert(this.name);
 };
 ```
 **2.对象字面量创建方法**
@@ -144,8 +144,8 @@ name: "Nicholas",
 age: 29,
 job: "Software Engineer",
 sayName: function(){
-alert(this.name);
-}
+    alert(this.name);
+    }
 };
 ```
 
@@ -174,15 +174,15 @@ _year: 2004,
 edition: 1
 };
 Object.defineProperty(book, "year", {
-get: function(){
-return this._year;
+    get: function(){
+    return this._year;
 },
-set: function(newValue){
-if (newValue > 2004) {
-this._year = newValue;
-this.edition += newValue - 2004;
-}
-}
+    set: function(newValue){
+        if (newValue > 2004) {
+            this._year = newValue;
+            this.edition += newValue - 2004;
+        }
+    }
 });
 book.year = 2005;
 alert(book.edition); //2
