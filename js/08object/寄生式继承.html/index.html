@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 寄生式继承
+// function  createAnother(original){
+//     var clone = Object(original);
+//     clone.sayHi =function(){
+//         alert('hi');
+//     };
+//     return clone;
+// }
+// var person = {
+//     name:'nicholas',
+//     friends:['shelg','fdg','dt']
+// };
+// var anotherPerson = createAnother(person);
+// anotherPerson.sayHi();
+
+//组合式继承
+// function superType(name){
+//     this.name = name;
+//     this.colors = ['hdg','dg','d']
+// }
+// superType.prototype.sayName = function(){
+//     alert(this.name);
+// }
+// function subType(name,age){
+//     superType.call(this, name);
+//     this.age = age;
+// }
+// subType.prototype = new superType();
+// subType.prototype.constructor = subType;
+// subType.prototype.sayAge = function(){
+//     alert(this.age)
+// }
+
+//寄生组合式继承
+function inheritPrototype(subType,superType){
+    var st = Object(superType.prototype);
+    st.constructor = subType;
+    subType.prototype = st;
+}
+
+function superType(name){
+    this.name = name;
+    this.colors = ['dg','sh','sr']
+}
+superType.prototype.sayName = function(){
+    alert(this.name);
+}
+
+function subType(name,age){
+    superType.call(this, name);
+    this.age = age;
+}
+
+inheritPrototype(subType,superType);
+subType.prototype.SayAge = function(){
+    alert(this.age);
+}
+var s = new subType('33',12);
+s.SayAge();
+</script>
+</body>
+</html>

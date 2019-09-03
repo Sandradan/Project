@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Person() {}
+        // Person.prototype.name = 'dg';
+        // Person.prototype.age = 23;
+        // Person.prototype.job = 'engineer';
+        // Person.prototype.sayName = function () {
+        //     alert(this.age)
+        // };
+        // var p1 = new Person();
+        // var p2 = new Person();
+        // p1.age = 33;
+        // alert(p1.age);
+        // alert(p2.age);
+
+        // 借用构造函数
+        // function SuperType(name) {
+        //     this.name = name;
+        // }
+
+        // function SubType() {
+        //     //继承了SuperType
+        //     SuperType.call(this,'Nicholas');
+        //     this.age = 29;
+        // }
+        // var instance = new SubType();
+        // alert(instance.name);
+        // alert(instance.age)
+
+
+        // 组合继承
+        // function SuperType(name){
+        //     this.name = name;
+        //     this.color = ['red','blue','green'];
+        // }
+
+        // SuperType.prototype.sayName = function(){
+        //     alert(this.name);
+        // };
+        // function SubType(name, age){
+        //     //继承属性
+        //     SuperType.call(this, name);
+        //     this.age = age;
+        // }
+        // //继承方法
+        // SubType.prototype = new SuperType();
+        // SubType.prototype.constructor = SubType;
+        // SubType.prototype.sayAge = function(){
+        //     alert(this.age);
+        // }
+        // var instance1 = new SubType('sangeg',12);
+        // instance1.color.push('black');
+        // alert(instance1.color);     //"red,blue,green,black"
+        // instance1.sayName();        //'sangeg'
+        // instance1.sayAge()      //12
+
+        // var instance2 = new SubType('df', 35);
+        // alert(instance2.color);     //"red,blue,green"
+        // instance2.sayName();        //'df'
+        // instance2.sayAge();     //35
+
+        // 原型式继承
+        // var Person = {
+        //     name: 'Nicholas',
+        //     friends: ['Shelly', ' Court', 'Van']
+        // };
+
+        // var anotherPerson = object(person);
+        // anotherPerson.name = 'Greg';
+        // anotherPerson.friends.push('Rob');
+
+        // var yetAnotherPerson = object(person);
+        // yetAnotherPerson.name = 'Linda';
+        // yetAnotherPerson.friends.push('Barbie');
+
+        // alert(person.friends);      //"Shelby,Court,Van,Rob,Barbie"
+
+
+// Object.create()
+        // var person = {
+        //     name: 'nisgh',
+        //     friends:['she', 'dgj','vav']
+        // };
+        // var anotherPerson = Object.create(person);
+        // anotherPerson.name = 'gtey';
+        // anotherPerson.friends.push('fg');
+
+        // var yetAnotherPerson = Object.create(person);
+        // yetAnotherPerson.name = 'linda';
+        // yetAnotherPerson.friends.push('fs');
+        // alert(person.friends)   //'she,dgj,vav,fg,fs'
+
+        var person = {
+            name:'nicholas',
+            friends:['shelly','court','van']
+        }
+        var anotherPerson = Object.create(person,{
+            name:{
+                value:'grey'
+            }
+        })
+        alert(anotherPerson.name);  //'grey'
+    </script>
+</body>
+
+</html>
