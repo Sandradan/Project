@@ -45,7 +45,8 @@ sayHi();
 eval = "hi"; //causes error
 ```
 ###### 3.global对象的属性
-![9878d99d2bcaa4d4e39527a3744945af.png](en-resource://database/1880:1)
+![Alt text] (https://github.com/Sandradan/Project/blob/master/js/08object/images/global.png)
+
 
 ###### 4.window对象
 web浏览器都是讲全局对象作为window对象的一部分加以实现的。在全局作用域中声明的所有变量和函数，都成为了window对象的属性。
@@ -58,7 +59,7 @@ window.sayColor(); //"red"
 ```
 #### 2.Math对象
 ###### 1.Math对象的属性
-![Image.png](en-resource://database/1882:1)
+![Alt text] (https://github.com/Sandradan/Project/blob/master/js/08object/images/math.png)
 
 ###### 2.min()和max()方法
 ```
@@ -118,8 +119,7 @@ var color = colors[selectFrom(0, colors.length-1)];
 alert(color); // 可能是数组中包含的任何一个字符串
 ```
 ###### 5.其他方法
-![7b62c424b1aae0a4e166a4bf3435f310.png](en-resource://database/1884:1)
-
+![Alt text] (https://github.com/Sandradan/Project/blob/master/js/08object/images/other.png)
 
 
 
