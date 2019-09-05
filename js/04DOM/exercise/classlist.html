@@ -1,0 +1,18 @@
+<div class="bd user disabled">...</div>
+<script>
+    var div = document.querySelector('div');
+var classNames =div.className.split(/\s+/);
+var i,
+pos = -1;
+for(i = 0; i<classNames.length;i++){
+    if(classNames[i] == 'user'){
+        pos = i;
+        break;
+    }
+}
+classNames.splice(i,1);
+div.className = classNames.join(' ')
+
+
+
+</script>

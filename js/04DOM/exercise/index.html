@@ -7,10 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="" alt="" name="myImage">
-    <div id="myDiv" myspecial_attribute= 'hello' align='left'><!--A comment -->
-        </div>
-    <p>22</p>
+    <!-- <img src="" alt="" name="myImage">
+    <div id="myDiv" myspecial_attribute= 'hello' align='left'>A comment -->
+        <!-- </div>
+    <p>22</p> -->
+    <p>
+        <strong>1</strong>
+        <strong>2</strong>
+    </p>
     <script>
     // var d = document.getElementById('myDiv');
     // var d2 =d.attributes.getNamedItem('id').nodeValue;
@@ -35,18 +39,74 @@
     //     }
     //     return array.join(' ');
     // }
-       function loadScriptString(code){
-           var script = document.createElement('script');
-           script.type = 'text/javascript';
-           try{
-               script.appendChild(document.createTextNode(code))
-           }
-           catch(ex){
-              script.text = code 
-           }
-           document.body.appendChild(script)
-       }
-    loadScriptString("function sayHi(){alert('hi')}");
+    //    function loadScriptString(code){
+    //        var script = document.createElement('script');
+    //        script.type = 'text/javascript';
+    //        try{
+    //            script.appendChild(document.createTextNode(code))
+    //        }
+    //        catch(ex){
+    //           script.text = code 
+    //        }
+    //        document.body.appendChild(script)
+    //    }
+    // loadScriptString("function sayHi(){alert('hi')}");
+
+
+// //创建table
+//     var table = document.createElement('table');
+//     table.border = 1
+//     table.width = "100%"
+// //创建tbody
+//     var tbody = document.createElement('tbody')
+//     table.appendChild(tbody)
+// //创建第一行
+//         tbody.insertRow(0);
+//         tbody.rows[0].insertCell(0);
+//         tbody.rows[0].cells[0].appendChild(document.createTextNode("Cell 1,1"));
+//         tbody.rows[0].insertCell(1);
+//         tbody.rows[0].cells[1].appendChild(document.createTextNode("Cell 2,1"));
+
+// //创建第二行
+//         tbody.insertRow(1);
+//         tbody.rows[1].insertCell(0);
+//         tbody.rows[1].cells[0].appendChild(document.createTextNode("Cell 1,2"));
+//         tbody.rows[1].insertCell(1);
+//         tbody.rows[1].cells[1].appendChild(document.createTextNode("Cell 2,2"));
+// //将表格添加到文档主体中
+//     document.body.appendChild(table);
+  
+//    var divs = document.getElementsByTagName('div');
+//    var i,
+//    len=divs.length,
+//    div;
+//    for(i=0;i<=len;i++){
+//        div = document.createElement('div');
+//        div.appendChild(document.createTextNode('hello, world'))
+//        document.body.appendChild(div)
+//    }
+// var i,
+// lists = document.querySelectorAll('p strong')
+// len = lists.length,
+// list;
+
+// for(i = 0;i<len;i++){
+//     // list = lists[i];
+//     list = lists.item(i)
+//     list.className = 'important';
+//     // alert(list.firstChild.nodeValue)
+//     // alert(list.innerHTML);
+//     // alert(list.childNodes[0].nodeValue);
+// }
+var i,
+len,
+p = document.querySelector('p'),
+list = p.firstChild
+while(list !=p.lastChild){
+    processChild(p);
+    p = p.nextElementSibling;
+    alert(p.innerHTML)
+}
     </script>
 </body>
 </html>
