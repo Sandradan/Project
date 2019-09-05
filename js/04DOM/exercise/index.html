@@ -1,0 +1,53 @@
+<!-- fd -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" name="myImage">
+    <div id="myDiv" myspecial_attribute= 'hello' align='left'><!--A comment -->
+        </div>
+    <p>22</p>
+    <script>
+    // var d = document.getElementById('myDiv');
+    // var d2 =d.attributes.getNamedItem('id').nodeValue;
+    // var dd = d.attributes['id'].nodeValue;
+    // var d1 = d.getAttribute('id');
+    // alert(dd);
+    // console.log(d1)
+    // document.write(d2)
+
+
+    // function setattribute(ee){
+    //     var array = new Array()
+    //     var attrname,
+    //     attrvalue,
+    //     i
+    //     for(i = 0;i<ee.attributes.length;i++){
+    //         attrname = ee.attributes[i].nodeName;
+    //         attrvalue = ee.attributes[i].nodeValue;
+    //         if(ee.attributes[i].specified){
+    //             array.push(attrname+'='+attrvalue)
+    //         }
+    //     }
+    //     return array.join(' ');
+    // }
+       function loadScriptString(code){
+           var script = document.createElement('script');
+           script.type = 'text/javascript';
+           try{
+               script.appendChild(document.createTextNode(code))
+           }
+           catch(ex){
+              script.text = code 
+           }
+           document.body.appendChild(script)
+       }
+    loadScriptString("function sayHi(){alert('hi')}");
+    </script>
+</body>
+</html>
+<!-- fj -->
