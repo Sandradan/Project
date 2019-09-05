@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" name="button" id="myBtn" value="button1">
+    <script>
+        var btn = document.querySelector('input');
+        // btn.onclick = function(e){
+        //     alert(e.type)
+        // }
+
+        // var handler = function (event) {
+        //     switch (event.type) {
+        //         case 'click':
+        //             alert('clicked');
+        //             break;
+        //         case 'mouseover':
+        //             btn.style.backgroundColor = 'red';
+        //             break;
+        //         case 'mouseout':
+        //             alert('mouseouted');
+        //             event.target.style.backgroundColor = '';
+        //             break;
+        //         case 'mousedown':
+        //             alert('mousedown');
+        //             break;
+        //         case 'change':
+        //             alert('changed');
+        //             break;
+        //         default:
+        //             alert('other');
+        //             break;
+        //     }
+        // }
+        // btn.onclick = handler;
+        // btn.onmouseover = handler;
+        // btn.onmouseout = handler;
+        // btn.onmousedown = handler;
+        // btn.onchange = handler;
+        // btn.onkeyup = handler;
+
+
+        //stopPropagation()方法
+        btn.onclick =function(event){
+            alert('clicked');
+            // event.stopPropagation();
+        }
+        document.body.onclick = function(event){
+            alert('body clicked')
+        }
+    </script>
+</body>
+
+</html>

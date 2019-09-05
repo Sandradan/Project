@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="click me" name="username">
+    <input type=" button" value="button1" onclick="showMessage()">
+    <input type="button" name="button" id="myBtn" value="button2">
+    <input type="button" name="button" id="myBtn" value="button3">
+    <script>
+        var input = document.querySelectorAll('input')
+
+        function showMessage() {
+            alert(input[0].value);
+        }
+        input[2].onclick = function () {
+            alert(this.id);
+            input[2].onclick = null;
+        }
+        input[3].addEventListener('click',show);
+        function show(e){
+            console.log(e);
+            alert('hello,i am button3');
+            input[3].removeEventListener('click',show)
+        }
+
+        //IE8及之前的版本
+        // input[3].attachEvent('onclick', function () {
+        //     alert('clicked');
+        // })
+    </script>
+</body>
+
+</html>
