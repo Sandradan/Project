@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- <body onload="alert('loaded')"> -->
+
+<body>
+    <!-- <img src="timg (1).jpg" alt="" > -->
+    <script>
+        // window.onload = function(){
+        //     alert('hello')
+        // }
+        // window.addEventListener('load', function () {
+        //     alert('yes')
+        // })
+
+        // var img= document.querySelector('img');
+        // img.onload = function(){
+        //     alert('pic')
+        // }
+        // window.addEventListener('load',function (e) {
+        //     alert(e.type)
+        // })
+        window.onload = function(){
+            //加载图像文件
+            var image = new Image();
+            image.onload = function(){
+                alert('image loaded');
+            }
+            // image = document.createElement('img');
+            // document.querySelector('body').appendChild(image);
+            image.src = 'timg (1).jpg';
+            //加载js文件
+            var script =document.createElement('script');
+            script.onload = function(){
+                alert('script loaded!')
+            }
+            script.src = 'event.js';
+            document.body.appendChild(script);
+            //加载样式表
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text.css';
+            // link.addEventListener('load',function(e){
+            //     alert('link'+e.type+'好了');
+            // })
+            link.onload = function(){
+                alert("css load");
+            }
+            link.href = 'event.css';
+            document.head.appendChild(link);
+
+        }
+    </script>
+</body>
+
+</html>

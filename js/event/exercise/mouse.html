@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Related Elements Example</title>
+</head>
+
+<body>
+    <div id="myDiv" style="background-color:red;height:100px;width:100px;"></div>
+    <input type="text" value="text">
+    <input type="radio" class="dd">
+</body>
+<script>
+    var div = document.querySelector('div');
+    var text =document.querySelector('input');
+    var ra = document.querySelector('.dd')
+    //鼠标移出
+    div.onmouseout = function (e) {
+        alert("Moused out of " + e.target.tagName + " to " + e.relatedTarget.tagName);
+    }
+    //鼠标按钮按下
+    div.onmousedown = function (e) {
+        alert(e.button)
+    }
+    //鼠标滚轮(chrome)
+    div.onmousewheel = function(e){
+        alert(e.wheelDelta)
+    }
+    //firefox的鼠标滚轮
+    window.addEventListener('DOMMouseScroll',function(e){
+        alert(e.detail)
+    })
+
+    //键码
+    text.addEventListener('keydown',function(e){
+        alert(e.keyCode)
+    })
+    text.addEventListener('textInput',function(e){
+        alert('keypress')
+    })
+</script>
+
+</html>

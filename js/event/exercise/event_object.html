@@ -46,14 +46,40 @@
         // btn.onkeyup = handler;
 
 
-        //stopPropagation()方法
-        btn.onclick =function(event){
-            alert('clicked');
-            // event.stopPropagation();
-        }
-        document.body.onclick = function(event){
-            alert('body clicked')
-        }
+        // //stopPropagation()方法
+        // btn.onclick =function(event){
+        //     alert('clicked');
+        //     // event.stopPropagation();
+        // }
+        // document.body.onclick = function(event){
+        //     alert('body clicked')
+        // }
+
+        // var btn = document.getElementById("myBtn");
+        // btn.onclick = function () {
+        //     var event = window.event;
+        //     alert(event.type); //"click"
+        // };
+
+        // btn.onclick = function(e){
+        //     alert(e.currentTarget == this)
+        //     alert(e.target == this)
+        //     alert(btn == this)
+        // }
+
+        // btn.onclick = function(){
+        //     var event = window.event;
+        //     alert(event.srcElement === this)
+        //     // alert(event.type)
+        // }
+
+        // btn.onclick = function(){
+        //     alert('clicked');
+        //     window.event.cancelBubble = true;
+        // }
+        // document.body.onclick = function(){
+        //     alert('body clicked')
+        // }
     </script>
 </body>
 

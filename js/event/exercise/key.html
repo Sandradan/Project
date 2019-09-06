@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改键</title>
+</head>
+
+<body>
+    <input type="text" name="" id="">
+    <input type="button" value="submit">
+    <script>
+        
+        var inputs = document.querySelectorAll('input');
+        var text = document.createElement('p');
+        document.body.appendChild(text);
+
+        inputs[1].onclick = function (e) {
+            var inputValue = inputs[0].value;
+            inputs[0].value = '';
+            text.innerHTML = inputValue;
+            inputs[0].focus();
+            
+        }
+        inputs[0].onclick = function(e){
+            var array = new Array();
+            if(e.shiftKey){
+                array.push('shift')
+            }
+            if(e.ctrlKey){
+                array.push('ctrl')
+            }
+            alert(array.join(','))
+        }
+        
+        
+    </script>
+</body>
+
+</html>
