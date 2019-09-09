@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>button</button>
+    <script>
+        var el = document.querySelector('button')
+        var myEvent = new CustomEvent('myevent', {
+            detail: {
+                foo: 'bar'
+            },
+            bubbles: true,
+            cancelable: false
+        });
+
+        el.addEventListener('myevent', function (event) {
+            console.log('Hello ' + event.detail.foo);
+        });
+
+        el.dispatchEvent(myEvent);
+
+
+
+
+
+        var promise = getAsyncPromise('1.txt');
+        promise.then(function(result) {
+            //获取成功的处理
+        }).catch(function(error){
+            //获取失败的处理
+        })
+    </script>
+</body>
+
+</html>

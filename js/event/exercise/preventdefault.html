@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p><a id="link1" href="#link1">Visit link 1</a></p>
+    <p><a id="link2" href="#link2">Try to visit link 2</a> (you can't)</p>
+    <p id="log"></p> -->
+
+    <input type="number">
+    <script>
+        // var log = document.querySelector('#log');
+
+        // function stop(event) {
+        //     event.preventDefault()
+        // }
+
+        // function loclick(event) {
+        //     if (event.target.tagName === 'A') {
+        //         if (event.defaultPrevented) {
+        //             log.innerHTML = 'sorry, the link cant be visited'
+        //         } else {
+        //             log.innerHTML = 'you can visit the link'
+        //         }
+        //     }
+        // }
+        // var link2 = document.querySelector('#link2');
+        // link2.addEventListener('click', stop);
+        // document.addEventListener('click', loclick)
+
+        var text = document.querySelector('input');
+        text.addEventListener('keypress',function(e){
+            if(e.charCode >97&&e.charCode <122){
+                e.preventDefault()
+            }
+        },false)
+    </script>
+</body>
+
+</html>

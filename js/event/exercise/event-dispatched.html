@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>button</button>
+    <button>button2</button>
+    <script>
+        var btn = document.querySelectorAll('button');
+        var event = new Event('click');
+        btn[0].addEventListener('click',
+            function () {
+                alert('hello')
+            })  
+       btn[0].dispatchEvent(event);
+       var cancle = !btn[1].dispatchEvent(event)
+       if(cancle){
+           alert('cancle')
+       }else{
+           alert('no cancle')
+       }
+
+    </script>
+</body>
+
+</html>
