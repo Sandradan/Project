@@ -1,0 +1,14 @@
+<script>
+    var pic = function (path) {
+        return new Promise(function (resolve, reject) {
+            var img = new Image();
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = path;
+        })
+    }
+    var p = Promise.resolve('https://example.com/my.jpg');
+    p
+    .then()
+
+</script>

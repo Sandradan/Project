@@ -1,0 +1,44 @@
+<script>
+    // function getURL(URL) {
+    //     return new Promise(function (resolve, reject) {
+    //         var req = new XMLHttpRequest();
+    //         req.open('GET', URL, true);
+    //         req.load = function () {
+    //             if (req.status === 200) {
+    //                 resolve(req.responseText);
+    //             } else {
+    //                 reject(new Error(req.statusText));
+    //             }
+    //         };
+    //         req.onerror = function () {
+    //             reject(new Error(req.statusText));
+    //         };
+    //         req.send();
+    //     });
+    // }
+    // var URL = 'http://httpbin.org/get';
+    // getURL(URL).then(function onFulfilled(value) {
+    //     console.log(value);
+    // }).catch(function onRejected(error) {
+    //     console.error(error);
+    // });
+
+
+
+
+    // var promise = new Promise(function(resolve){
+    //     console.log ('inner Promise')
+    //     resolve(42)
+    // })
+    // promise.then(function onFulfilled(value){
+    //     console.log(value);
+    // })
+    // console.log('outer Promise')
+
+    Promise.resolve(42).then(function(value){
+        console.log(value)
+    });
+    Promise.reject(new Error('出错了')).catch(function(error){
+        console.error(error)
+    });
+</script>

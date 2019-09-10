@@ -1,0 +1,43 @@
+<script>
+    // function multwo(value) {
+    //     return value * 2
+    // }
+
+    // function add(value) {
+    //     console.log('2:' + value)
+    // }
+    // // var apromisr = new Promise(function (resolve) {
+    // //     resolve(100);})
+    // var apromisr = Promise.resolve(100)
+    //     apromisr
+    //         .then(multwo)
+    //         .then(multwo)
+    //         .then(add)
+    //         .catch(function (error) {
+    //             console.error(error)
+    //         })
+
+
+    function getURL(URL) {
+        var xml = new XMLHttpRequest();
+        xml.open('GET', URL, true);
+        xml.load = function () {
+            if (xml.status === 200) {
+                console.log(xml.responseText)
+            } else {
+                console.log(xml.statusText)
+            }
+        }
+        xml.onerror = function () {
+            reject(new Error(req.statusText));
+        };
+        xml.send()
+    }
+    // var URL = 'http://httpbin.org/get';
+    var pro = Promise.resolve('http://httpbin.org/get');
+    pro
+        .then(getURL)
+        .catch(function (error) {
+            console.error(error);
+        })
+</script>
