@@ -1,0 +1,52 @@
+<script>
+    // {
+    //     let a = 'secret'
+    //     let b = function(){
+    //         console.log(a) 
+    //     }
+    //     b()
+    // }
+
+    // function move({x=1,y=1} = {}){
+    //     return [x,y];
+    // }
+    // console.log(move({x:1,y:2}))
+    // console.log(move({x:2,y:4}))
+    // console.log(move())
+    // console.log(move({}))
+
+    //返回数组
+    // function example(){
+    //     return [1,2,3]
+    // }
+    // let[a,b,c] = example();
+
+    //返回对象
+    // function example(){
+    //     return{
+    //         foo:1,
+    //         bar:2
+    //     }
+    // }
+    // let{foo,bar} = example()
+
+    const tmp1 = addrs => `
+    <table>
+    ${addrs.map(addr=>`
+    <tr><td>${addr.first}</td></tr>
+    <tr><td>${addr.last}</td></tr>
+    `).join('')
+    }
+    </table>
+    `.trim()
+    const data = [{
+            first: '<jane>',
+            last: 'bond'
+        },
+        {
+            first: 'lad',
+            last: '<croft>'
+        }
+    ]
+    console.log(tmp1(data))
+</script>

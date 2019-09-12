@@ -1,0 +1,87 @@
+<div></div>
+<script>
+//     let template = `
+// <ul>
+//   <% for(let i=0; i < data.supplies.length; i++) { %>
+//     <li><%= data.supplies[i] %></li>
+//   <% } %>
+// </ul>
+// `;
+//     let evalExpr = /<%=(.+?)%>/g;
+//     let expr = /<%([\s\S]+?)%>/g;
+
+//     template = template
+//         .replace(evalExpr, '`); \n  echo( $1 ); \n  echo(`')
+//         .replace(expr, '`); \n $1 \n  echo(`');
+
+//     template = 'echo(`' + template + '`);';
+
+
+
+
+// var div = document.querySelector('div')
+// function compile(template){
+//   const evalExpr = /<%=(.+?)%>/g;
+//   const expr = /<%([\s\S]+?)%>/g;
+
+//   template = template
+//     .replace(evalExpr, '`); \n  echo( $1 ); \n  echo(`')
+//     .replace(expr, '`); \n $1 \n  echo(`');
+
+//   template = 'echo(`' + template + '`);';
+
+//   let script =
+//   `(function parse(data){
+//     let output = "";
+
+//     function echo(html){
+//       output += html;
+//     }
+
+//     ${ template }
+
+//     return output;
+//   })`;
+
+//   return script;
+// }
+// let parse = eval(compile(template));
+// div.innerHTML = parse({ supplies: [ "broom", "mop", "cleaner" ] });
+
+
+
+
+
+
+
+
+let total = 30;
+let msg = passthru`The total is ${total} (${total*1.05} with tax)`;
+
+// function passthru(literals) {
+//   let result = '';
+//   let i = 0;
+
+//   while (i < literals.length) {
+//     result += literals[i++];
+//     if (i < arguments.length) {
+//       result += arguments[i];
+//       alert(result)
+//     }
+//   }
+
+//   return result;
+// }
+
+function passthru(literals, ...values) {
+  let output = "";
+  let index;
+  for (index = 0; index < values.length; index++) {
+    output += literals[index] + values[index];
+  }
+
+  output += literals[index]
+  return output;
+}
+console.log(msg)
+</script>
