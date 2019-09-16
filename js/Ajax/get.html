@@ -1,0 +1,52 @@
+<script>
+    function createXHR() {
+        if (typeof XMLHttpRequest != 'undefined') {
+            return new XMLHttpRequest()
+        } else if (typeof ActiveXObject != 'undefined') {
+            if (arguments.callee.activeXString != 'string') {
+                var version = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0",
+                        "MSXML2.XMLHttp"
+                    ],
+                    i,
+                    len;
+                for (i = 0, len = version.length; i < len; i++) {
+                    try {
+                        new ActiveXObject(version[i]);
+                        arguments.callee.activeXString = version[i];
+                        break;
+                    } catch (ex) {
+                        //
+                    }
+                }
+            }
+            return new ActiveXObject(arguments.callee.activeXString)
+        } else {
+            throw new Error('no XHR object available')
+        }
+    }
+    var xhr = createXHR(); 
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                alert(xhr.responseText)
+            } else {
+                alert('request was unsuccessful:' + xhr.status)
+            }
+        }
+    }
+    function addURLParam(url, name, value){
+        url += (url.indexOf('?') == -1 ?'?':'&');
+        url += encodeURIComponent(name) + '=' +encodeURIComponent(value);
+        return url;
+    }
+    var url = 'example.php';
+    url = addURLParam(url, 'name', 'Niholas');
+    url = addURLParam(url, 'name', 'Professional JavaScript');
+    // xhr.open('get', url, true);
+    xhr.open('post',url, true);
+    xhr.setRequestHeader('MyHeader','MyValue');
+    var myHeader = xhr.getResponseHeader('MyHeader');
+    console.log(myHeader);
+    xhr.send(null);
+    xhr.abort();
+</script>

@@ -1,0 +1,19 @@
+<div class="status"></div>
+<script>
+var xhr = new XMLHttpRequest()
+xhr.onload = function(){
+    if((xhr.status >=200&&xhr.status<300)||xhr.status == 304){
+        alert(xhr.responseText)
+    }else{
+        alert('no response')
+    }
+}
+xhr.onprogress = function(){
+    var status = document.querySelector('.status');
+    if(event.lengthComputable){
+        status.innerHTML = 'Received'+event.position+'of'+event.totalSize+'bytes' 
+    }
+}
+xhr.open('get','http://www.nczonline.net',true)
+xhr.send(null)
+</script>

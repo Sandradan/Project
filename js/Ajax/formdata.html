@@ -1,0 +1,13 @@
+<!-- 序列化 -->
+<html>
+    <form action="" id="user-info">
+        <input type="text">
+    </form>
+</html>
+<script>
+var xhr = new XMLHttpRequest()
+xhr.open('post','postexample.php',true)
+var form = document.querySelector('#user-info')
+xhr.send(new FormData(form));
+
+</script>

@@ -1,0 +1,49 @@
+<form action="" id="user-info">
+    <input type="text">
+</form>
+<script>
+    function createXHR() {
+        if (typeof XMLHttpRequest != 'undefined') {
+            return new XMLHttpRequest()
+        } else if (typeof ActiveXObject != 'undefined') {
+            if (arguments.callee.activeXString != 'string') {
+                var version = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0",
+                        "MSXML2.XMLHttp"
+                    ],
+                    i,
+                    len;
+                for (i = 0, len = verson.length; i < len; i++) {
+                    try {
+                        new ActiveXObject(version[i]);
+                        arguments.callee.activeXString = version[i];
+                        break;
+                    } catch (ex) {
+                        //
+                    }
+                }
+            }
+            return new ActiveXObject(arguments.callee.activeXString)
+        } else {
+            throw new Error('no XHR object available')
+        }
+    }
+
+    function submitData() {
+        var xhr = new createXHR();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if ((xhr.status > 200 && xhr.status < 300) || xhr.status == 304) {
+                    alert(xhr.responseText);
+                } else {
+                    alert('request was unsuccessful')
+                }
+            }
+        }
+        var form = document.querySelector('form')
+        xhr.open('post', 'postexample.php', true);
+        ///ajax/test1.txt
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(serialize(form));
+    }
+    submitData()
+</script>

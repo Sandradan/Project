@@ -1,0 +1,36 @@
+<button class="d1" onclick="click1()">按钮</button>
+<script>
+    // if (window.XDomainRequest) {
+    // var xdr = new XDomainRequest();
+    // xdr.onload = function () {
+    //     alert(xdr.responseText);
+    // }
+    // xdr.onerror = function(){
+    //     alert('error occurred')
+    // }
+    // xdr.open('get', "http://www.somewhere-else.com/page/");
+    // xdr.contentType = 'application/x-www-form-urlencoded';
+    // xdr.send("name1=value1&name2=value2")
+    // }
+
+
+function click1(){
+    if(window.XMLHttpRequest){
+    var xhr = new XMLHttpRequest();
+}else{
+    xhr = new ActiveXObject("Microsoft.XMLHTTP")
+}
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                alert(xhr.responseText);
+            } else {
+                alert("Request was unsuccessful: " + xhr.status);
+            }
+        }
+    };
+    xhr.open("get", "http://www.somewhere-else.com/page/", true);
+    xhr.send(null);
+
+}
+</script>

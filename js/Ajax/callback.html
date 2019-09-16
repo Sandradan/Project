@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var xhp;
+    
+        function loadXMLDoc(url,func){
+            if(window.XMLHttpRequest){
+                xhp = new XMLHttpRequest()
+            }else{
+                xhp = new ActiveXObject()
+            }
+          
+            xhp.onload = func;
+            xhp.open('get',url,true);
+            xhp.send()
+        }
+        function func(){
+            loadXMLDoc('/ajax/test1.txt',function(){
+                if((xhp.status >=200&&xhp.status< 300)||xhp.status == 304){
+                    document.querySelector('#myDiv').innerHTML = xhp.responseText;
+                }else{
+                    alert('error occurred!')
+                }
+            })
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="myDiv">
+        <h2>Let AJAX change this text</h2>
+    </div>
+    <button type="button" onclick="myFunction()">通过 AJAX 改变内容</button>
+
+</body>
+
+</html>

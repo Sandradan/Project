@@ -1,0 +1,50 @@
+<script>
+    function createXHR() {
+        if (typeof XMLHttpRequest != 'undefined') {
+            return new XMLHttpRequest()
+        } else if (typeof ActiveXObject != 'undefined') {
+
+            if (arguments.callee.activeXString != 'string') {
+                var version = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0",
+                        "MSXML2.XMLHttp"
+                    ],
+                    i, len;
+                for (i = 0, len = version.length; i < len; i++) {
+                    try {
+                        new ActiveXObject(version[i])
+                        arguments.callee.activeXString = version[i]
+                        break
+                    } catch (ex) {}
+                }
+            }
+            return new ActiveXObject(arguments.callee.activeXString)
+        } else {
+            throw new Error('no xml')
+        }
+    }
+    var xhr = createXHR()
+    xhr.onreadystatechange = function () {
+
+        if (xhr.readyState == 4) {
+            try {
+                if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                    alert(xhr.responseText)
+                } else {
+                    alert('request was unsuccessful:' + xhr.status)
+                }
+            } catch (ex) {
+                alert('guoshi')
+            }
+        }
+    }
+    xhr.open('post', 'postexample.php', true)
+    xhr.overrideMimeType('text/html')
+    xhr.timeout = 1000;
+    xhr.onerror = function(){
+        alert('error')
+    }
+    xhr.ontimeout = function () {
+        alert('request did not return in a second')
+    };
+    xhr.send(null);
+</script>
