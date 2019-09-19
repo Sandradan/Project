@@ -4,19 +4,40 @@ class Reservation extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-
+            isgoing: true,
+            numberOfGuests: 2
         }
+    }
+    handleInputChange = (e)=>{
+        const target = e.target
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name
+        this.setState({
+                [name]:value
+        });
     }
     render(){
         return(
             <form>
-                参与：
+                <label>
+                is going：
                 <input 
-
+                    name='isgoing'
+                    type='checkbox'
+                    checked = {this.state.isgoing}
+                    onChange={this.handleInputChange}
                 />
+                </label>
                 <br />
-                来宾人数：
-                <input />
+                <label>
+                number of guests:
+                <input 
+                    name = 'numberOfGuests'
+                    type = 'number'
+                    value = {this.state.numberOfGuests}
+                    onChange = {this.handleInputChange}
+                />
+                </label>
             </form>
         )
     }
