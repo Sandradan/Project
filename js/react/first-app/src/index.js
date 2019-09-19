@@ -1,0 +1,7 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import App from './other/hello_world'
+import 受控组件 from './other/受控组件'
+// import toDoList from './todolist/toDoList'
+import option from './other/option'
+import 多个输入 from './other/多个输入'

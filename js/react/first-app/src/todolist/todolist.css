@@ -1,0 +1,12 @@
+.box{
+   width: 50%;
+   margin:0 auto;
+   border: solid 1px rgb(17, 115, 228);
+   background-color: azure
+}
+div{
+    padding:2em
+}
+input{
+    margin-right: 10px;
+}
