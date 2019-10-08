@@ -1,14 +1,55 @@
 import {withRouter} from 'next/router'
 import Link from 'next/link'
-import { resolve } from 'any-promise';
-// const A = ({ router,name })=><Link href='#aaa'><a>hello a{router.query.id}{name}</a></Link>
-const A = ({ router })=><Link href='#aaa'><a>A { router.query.id }</a></Link>
+import styled from 'styled-components'
+// import moment from 'moment'
+import dynamic from 'next/dynamic'
+// import Comp from '../components/comp'
 
-A.getInitialProps = async ()=>{
+const Comp =dynamic(import('../components/comp'))
+const Title = styled.h1`
+color: yellow;
+font-size: 40px;`
+
+const color = '#113366'
+// const A = ({ router,name })=><Link href='#aaa'><a>hello a{router.query.id}{name}</a></Link>
+const A = ({ router, name, time })=>(
+    <>
+        <Title>This is Title {time} </Title>
+        <Comp />
+        <Link href='#aaa'>
+        <a className='link'>
+            A { router.query.id } {name}
+            </a>
+        </Link>
+        <style jsx>
+            {
+                `a{
+                    color:blue
+                }
+                .link{
+                    color:red
+                }
+                `
+            }
+        </style>
+        <style jsx global>
+            {`
+                a{
+                    color:yellow
+                }
+            `}
+        </style>
+    </>
+)
+
+
+A.getInitialProps = async (ctx)=>{
+    const moment = await import('moment') //执行到这行代码才会加载
     const promise = new Promise((resolve)=>{
         setTimeout(() =>{
             resolve({
-                name:'jack'
+                name:'jack',
+                time: moment.default( Date.now() - 60*1000 ).fromNow()
             })
         },1000)
     })

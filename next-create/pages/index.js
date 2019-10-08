@@ -29,10 +29,7 @@ export default ()=>{
     }
     return(
     <>
-        <Link href = '/a?id=1' as= '/a/1' title='aaa'>
-            <Button>跳转</Button>
-        </Link>
-        <Button onClick={gotoB}>b</Button>
+        <span>Index</span>
     </>
     )
 }
