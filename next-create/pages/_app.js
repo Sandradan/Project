@@ -1,9 +1,15 @@
 //覆盖react中组件app的地方
 import App, { Container } from 'next/app'
 import 'antd/dist/antd.css'
+
+import MyContext from '../lib/my-context'
+
 import Layout from '../components/Layout'
 class MyApp extends App{
 
+    state = {
+        context: "value"
+    }
     static async getInitialProps({ Component, ctx }){
         // console.log("app init")
         let pageProps
@@ -20,7 +26,10 @@ class MyApp extends App{
         return(
             <Container>
                 <Layout>
-                    <Component {...pageProps} />
+                    <MyContext.Provider value = {this.state.context}>
+                        <Component {...pageProps} />
+                        <button onClick = {() => this.setState({context: `${this.state.context}111`})}> update context </button>
+                    </MyContext.Provider>
                 </Layout>
             </Container>
         )
